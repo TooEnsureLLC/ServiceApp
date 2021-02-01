@@ -1,33 +1,28 @@
-﻿
-
-
-@if (VerticalMiddle && !HorizontalMiddle)
+﻿@if (VerticalMiddle && !HorizontalMiddle && !HorizontalEnd)
 {
-    <div class="@Main @AddOn d-flex align-items-center">
+    <div class="@Main @AddOn d-flex align-items-center justify-content-start">
         @ChildContent
     </div>
-}
-else if (HorizontalMiddle && !VerticalMiddle)
-{
-    <div class="@Main @AddOn d-flex justify-content-center">
-        @ChildContent
-    </div>
-}
-else if (VerticalMiddle && HorizontalMiddle)
+} else if(VerticalMiddle && HorizontalMiddle)
 {
     <div class="@Main @AddOn d-flex align-items-center justify-content-center">
         @ChildContent
     </div>
-}
-else
+} else if (VerticalMiddle && HorizontalEnd)
 {
+    <div class="@Main @AddOn d-flex align-items-center justify-content-end">
+        @ChildContent
+    </div>
+} else {
     <div class="@Main @AddOn">
         @ChildContent
     </div>
 }
+
 @code {
     [Parameter] public bool VerticalMiddle { get; set; } = false;
     [Parameter] public bool HorizontalMiddle { get; set; } = false;
+    [Parameter] public bool HorizontalEnd { get; set; } = false;
 
     [Parameter] public string AddOn { get; set; }
     [Parameter] public string Main { get; set; } = "col-sm-12";

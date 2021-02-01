@@ -1,7 +1,7 @@
 ﻿
 @if (SetHeight)
 {
-    <div class="row @AddOn" style="height:@(Height +  "rem")">
+    <div class="row @AddOn" style="height:@(Height +  "rem"); background: url(@UrlImage); background-repeat: no-repeat; background-size:100%;">
         @ChildContent
     </div>
 }
@@ -10,12 +10,12 @@ else if (!SetHeight)
     <div class="row @AddOn">
         @ChildContent
     </div>
-
 }
 @code {
     [Parameter] public bool SetHeight { get; set; } = false;
     [Parameter] public string AddOn { get; set; }
     [Parameter] public int Height { get; set; }
+    [Parameter] public string UrlImage { get; set; }
     [Parameter] public RenderFragment ChildContent { get; set; }
 
 }
