@@ -1,0 +1,13 @@
+﻿
+<GridRow>
+    <GridCol Main="col-sm-8">
+        Hello
+    </GridCol>
+    <GridCol Main="col-sm-4">
+        @ChildContent
+    </GridCol>
+</GridRow>
+
+@code {
+    public RenderFragment ChildContent { get; set; }
+}

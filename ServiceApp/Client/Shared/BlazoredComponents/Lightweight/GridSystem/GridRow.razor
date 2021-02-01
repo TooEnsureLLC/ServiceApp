@@ -1,0 +1,21 @@
+﻿
+@if (SetHeight)
+{
+    <div class="row @AddOn" style="height:@(Height +  "rem")">
+        @ChildContent
+    </div>
+}
+else if (!SetHeight)
+{
+    <div class="row @AddOn">
+        @ChildContent
+    </div>
+
+}
+@code {
+    [Parameter] public bool SetHeight { get; set; } = false;
+    [Parameter] public string AddOn { get; set; }
+    [Parameter] public int Height { get; set; }
+    [Parameter] public RenderFragment ChildContent { get; set; }
+
+}

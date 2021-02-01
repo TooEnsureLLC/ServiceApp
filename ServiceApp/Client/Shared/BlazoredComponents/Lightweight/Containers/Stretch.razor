@@ -1,0 +1,10 @@
+﻿
+<div class="@AddOn" style="height:@(Height +  "rem")">
+    @ChildContent
+</div>
+
+@code {
+    [Parameter] public int Height { get; set; } = 5;
+    [Parameter] public string AddOn { get; set; }
+    [Parameter] public RenderFragment ChildContent { get; set; }
+}

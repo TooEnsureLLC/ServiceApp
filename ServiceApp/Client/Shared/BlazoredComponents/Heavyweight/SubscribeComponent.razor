@@ -1,0 +1,19 @@
+﻿
+<GridRow>
+    <GridCol Main="col-sm-8 border">
+        <h3>@Text</h3>
+    </GridCol>
+    <GridCol Main="col-sm-4">
+        <div class="input-group">
+            <input type="text" class="form-control" placeholder="Username" aria-label="Username" aria-describedby="basic-addon1">
+        </div>
+    </GridCol>
+</GridRow>
+
+
+@code {
+    [Parameter] public string Text { get; set; }
+    [Parameter] public string Col1 { get; set; }
+    [Parameter] public string Col2 { get; set; }
+
+}

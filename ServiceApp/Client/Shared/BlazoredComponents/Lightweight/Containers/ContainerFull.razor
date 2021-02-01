@@ -1,0 +1,12 @@
+﻿
+
+<section class="container-fluid @AddOn" style="height:@(Height + "rem"); background: url(@UrlImage);">
+    @ChildContent
+</section>
+
+@code {
+    [Parameter] public int? Height { get; set; } = null;
+    [Parameter] public string UrlImage { get; set; }
+    [Parameter] public string AddOn { get; set; }
+    [Parameter] public RenderFragment ChildContent { get; set; }
+}
