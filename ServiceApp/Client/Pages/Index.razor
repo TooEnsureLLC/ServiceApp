@@ -1,7 +1,57 @@
 ﻿@page "/"
 
-<h1>Hello, world!</h1>
+<!-- Notices -->
+<ContainerFull>
+    <GridRow AddOn="border rounded">
+        <GridCol Main="col-12" AddOn="bg-info p-3">
+            <span class="text-light">Sorry. Im still developing site feel free to contact by email, Thanks.</span>
+        </GridCol>
+    </GridRow>
+</ContainerFull>
 
-Welcome to your new app.
+<!-- Hero -->
+<ContainerFull>
+    <GridRow SetHeight="true" Height="25" AddOn="border rounded" UrlImage="@heroUrl">
+        <GridCol Main="col-12" VerticalMiddle="true">
+            <h1>Welcome to Tooensure!</h1>
+        </GridCol>
+    </GridRow>
+</ContainerFull>
 
-<SurveyPrompt Title="How is Blazor working for you?" />
+<!-- Service Bar1 -->
+<ContainerFull>
+    <GridRow SetHeight="true" Height="15" UrlImage="@barUrl1" AddOn="border rounded">
+        <GridCol Main="col-6" VerticalMiddle="true">        
+            <h3 class="text-light">ddd</h3>
+        </GridCol>
+        <GridCol Main="col-6" VerticalMiddle="true" HorizontalEnd="true">        
+            <h3 class="text-light">Image</h3>
+        </GridCol>
+    </GridRow>
+</ContainerFull>
+
+<!-- Service Bar2 -->
+<ContainerFull>
+    <GridRow SetHeight="true" Height="15" UrlImage="@barUrl1" AddOn="border rounded">
+        <GridCol Main="col-6" VerticalMiddle="true">        
+            <h3 class="text-light">ddd</h3>
+        </GridCol>
+        <GridCol Main="col-6" VerticalMiddle="true" HorizontalEnd="true">        
+            <h3 class="text-light">Image</h3>
+        </GridCol>
+    </GridRow>
+</ContainerFull>
+
+<!-- Footer Links -->
+
+
+@code {
+    string heroUrl = 
+        "https://image.freepik.com/free-vector/colorful-background-theme_23-2148451521.jpg";
+
+    string barUrl1 = 
+        "https://freerangestock.com/sample/50242/background-color-represents-light-burst-and-bright.jpg";
+    string barUrl2 = 
+        "https://www.freegreatpicture.com/files/147/8964-background-color.jpg";
+
+}
